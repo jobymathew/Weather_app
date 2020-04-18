@@ -22,6 +22,7 @@
     <p>{{ city_weather.city }}</p>
     <p>{{ city_weather.temperature }}</p>
     <p>{{ city_weather.description }}</p>
+    <a href="{% url 'delete' pk=city_weather.city.pk %}">Remove</a>
     {% endfor %}
 </body>
 

@@ -3,4 +3,5 @@ from . import views
 
 urlpatterns = [
     path('',views.index,name='weather'),
+    path('delete/<str:pk>/',views.delete,name='delete'),
 ]
