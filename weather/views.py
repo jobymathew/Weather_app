@@ -1,4 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
+from django.urls import reverse
 import requests
 from .models import City
 from .forms import CityForm
@@ -9,6 +10,7 @@ def index(request):
     if request.method == "POST":
         form = CityForm(request.POST)
         form.save()
+        return redirect('/')
     
     form = CityForm()
     cities = City.objects.all()

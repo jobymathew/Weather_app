@@ -5,5 +5,5 @@ class CityForm(forms.ModelForm):
     class Meta:
         model = City
         fields = ['name']
-        widgets = {'name':forms.TextInput(attrs={'placeholder':'City/Name'})}
+        widgets = {'name':forms.TextInput(attrs={'placeholder':'City/Name','class':'ipbox'})}
  
